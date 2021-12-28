@@ -688,7 +688,7 @@ public class Principal extends javax.swing.JFrame{
 
         r_inv.setFont(new java.awt.Font("Comic Sans MS", 0, 11)); // NOI18N
         r_inv.setText("Inventario");
-        r_inv.setPreferredSize(new java.awt.Dimension(117, 25));
+        r_inv.setPreferredSize(new java.awt.Dimension(150, 25));
         r_inv.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 r_invActionPerformed(evt);

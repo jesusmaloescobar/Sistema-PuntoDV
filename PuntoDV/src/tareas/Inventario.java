@@ -108,7 +108,7 @@ public class Inventario extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Descripción", "Presentación", "Precio/Costo", "IVA C.", "Precio/Venta", "IVA V.", "Existencia", "Inversión"
+                "Código", "Descripción", "Presentación", "Precio/Compra S/IVA", "IVA C.", "Precio/Venta S/IVA", "IVA V.", "Existencia", "Inversión"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -135,15 +135,17 @@ public class Inventario extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tabla_inventario);
         tabla_inventario.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        tabla_inventario.getColumnModel().getColumn(0).setPreferredWidth(20);
-        tabla_inventario.getColumnModel().getColumn(1).setPreferredWidth(300);
-        tabla_inventario.getColumnModel().getColumn(2).setPreferredWidth(30);
-        tabla_inventario.getColumnModel().getColumn(3).setPreferredWidth(20);
-        tabla_inventario.getColumnModel().getColumn(4).setPreferredWidth(20);
-        tabla_inventario.getColumnModel().getColumn(5).setPreferredWidth(20);
-        tabla_inventario.getColumnModel().getColumn(6).setPreferredWidth(20);
-        tabla_inventario.getColumnModel().getColumn(7).setPreferredWidth(15);
-        tabla_inventario.getColumnModel().getColumn(8).setPreferredWidth(20);
+        if (tabla_inventario.getColumnModel().getColumnCount() > 0) {
+            tabla_inventario.getColumnModel().getColumn(0).setPreferredWidth(20);
+            tabla_inventario.getColumnModel().getColumn(1).setPreferredWidth(300);
+            tabla_inventario.getColumnModel().getColumn(2).setPreferredWidth(30);
+            tabla_inventario.getColumnModel().getColumn(3).setPreferredWidth(20);
+            tabla_inventario.getColumnModel().getColumn(4).setPreferredWidth(20);
+            tabla_inventario.getColumnModel().getColumn(5).setPreferredWidth(20);
+            tabla_inventario.getColumnModel().getColumn(6).setPreferredWidth(20);
+            tabla_inventario.getColumnModel().getColumn(7).setPreferredWidth(15);
+            tabla_inventario.getColumnModel().getColumn(8).setPreferredWidth(20);
+        }
 
         siguiente_pagina.setText("Siguiente>>");
         siguiente_pagina.addActionListener(new java.awt.event.ActionListener() {
@@ -211,7 +213,7 @@ public class Inventario extends javax.swing.JFrame {
         calculando.setString("Calculando...");
         calculando.setStringPainted(true);
 
-        inversion_en_letra.setFont(new java.awt.Font("Comic Sans MS", 1, 12));
+        inversion_en_letra.setFont(new java.awt.Font("Comic Sans MS", 1, 12)); // NOI18N
         inversion_en_letra.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         inversion_en_letra.setToolTipText("Inversión del total de inventario en precio de compra");
 
@@ -222,14 +224,14 @@ public class Inventario extends javax.swing.JFrame {
             }
         });
 
-        paginas.setFont(new java.awt.Font("Comic Sans MS", 1, 11));
+        paginas.setFont(new java.awt.Font("Comic Sans MS", 1, 11)); // NOI18N
         paginas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         paginas.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         paginas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel4.setText("Número de registros:");
 
-        total_articulos.setFont(new java.awt.Font("Comic Sans MS", 1, 13));
+        total_articulos.setFont(new java.awt.Font("Comic Sans MS", 1, 13)); // NOI18N
 
         vaciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/reciclar.png"))); // NOI18N
         vaciar.setText("Vaciar inventario");
@@ -246,7 +248,7 @@ public class Inventario extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1170, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()

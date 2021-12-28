@@ -1,4 +1,4 @@
-<?xml version="1.1" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.5" maxVersion="1.7" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
   <Properties>
@@ -7,6 +7,7 @@
   </Properties>
   <SyntheticProperties>
     <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
   </SyntheticProperties>
   <Events>
     <EventHandler event="windowClosing" listener="java.awt.event.WindowListener" parameters="java.awt.event.WindowEvent" handler="formWindowClosing"/>
@@ -30,7 +31,7 @@
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace min="-2" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
-                  <Component id="jScrollPane1" alignment="0" pref="1170" max="32767" attributes="0"/>
+                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
                   <Group type="102" alignment="1" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -128,9 +129,9 @@
                 <Column editable="false" title="C&#xf3;digo" type="java.lang.Object"/>
                 <Column editable="false" title="Descripci&#xf3;n" type="java.lang.Object"/>
                 <Column editable="false" title="Presentaci&#xf3;n" type="java.lang.Object"/>
-                <Column editable="false" title="Precio/Costo" type="java.lang.Object"/>
+                <Column editable="false" title="Precio/Compra S/IVA" type="java.lang.Object"/>
                 <Column editable="false" title="IVA C." type="java.lang.Object"/>
-                <Column editable="true" title="Precio/Venta" type="java.lang.Object"/>
+                <Column editable="true" title="Precio/Venta S/IVA" type="java.lang.Object"/>
                 <Column editable="false" title="IVA V." type="java.lang.Object"/>
                 <Column editable="false" title="Existencia" type="java.lang.Object"/>
                 <Column editable="false" title="Inversi&#xf3;n" type="java.lang.Object"/>

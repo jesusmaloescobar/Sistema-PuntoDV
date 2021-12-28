@@ -41,7 +41,7 @@ public class Inventario extends Tabla{
   public void cargarInventario(){
         try {
             if(c.hayConexion()){
-              resultado = c.getScrollableStatement().executeQuery("SELECT a.id_articulo,a.descripcion,p.descripcion_p, i.precio_compra/(1+iva_c), (i.precio_compra/(1+i.iva_c))*iva_c, a.precio_venta/(1+iva_venta), (a.precio_venta/(1+a.iva_venta))*iva_venta,(select sum(existencia) where i.id_articulo=a.id_articulo) as total,(select sum(existencia) where i.id_articulo=a.id_articulo)*i.precio_compra as inversion "
+              resultado = c.getScrollableStatement().executeQuery("SELECT a.id_articulo, a.descripcion, p.descripcion_p, ROUND(i.precio_compra/(1+iva_c), 2), ROUND((i.precio_compra/(1+i.iva_c))*iva_c, 2), ROUND(a.precio_venta/(1+iva_venta), 2), ROUND((a.precio_venta/(1+a.iva_venta))*iva_venta, 2),(select sum(existencia) where i.id_articulo=a.id_articulo) as total,ROUND((select sum(existencia) where i.id_articulo=a.id_articulo)*i.precio_compra,2) as inversion "
                 +"FROM   inventario i,articulos a,presentacion p "
                 +"WHERE  i.id_articulo=a.id_articulo and p.id_presentacion=a.id_presentacion "
                 +"GROUP  BY i.id_articulo,a.id_articulo,a.descripcion,p.descripcion_p, i.precio_compra, i.iva_c, a.precio_venta, a.iva_venta "
