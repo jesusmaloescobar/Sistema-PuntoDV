@@ -1,0 +1,3 @@
+﻿--select n.nota_venta,dn.nota_venta,n.cant_tot,dn.cantidad from notas n, detalle_nota dn where fecha='15-06-2011' and id_ruta=6 and id_estatus=4 and n.nota_venta=dn.nota_venta
+--select sum(cant_tot) from notas where fecha='15-06-2011' and id_ruta=4 and id_estatus=4
+select sum(cantidad) from notas n, detalle_nota dn where fecha='15-06-2011' and dn.nota_venta=n.nota_venta and id_ruta=4 and id_estatus=4
