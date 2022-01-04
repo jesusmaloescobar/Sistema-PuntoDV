@@ -51,7 +51,10 @@ public class Inventario extends Tabla{
                setNumMaxPaginas(resultado.getRow());
                 resultado.beforeFirst(); //regresamos al inicio el cursor del ResultSet               
             }
-        } catch (Exception e) { System.out.println("error:"+e.getMessage());  }
+        } catch (Exception e) { 
+            System.out.println("error:"+e.getMessage());  
+            
+        }
     }
 
     public void getInversionTotal(){

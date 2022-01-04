@@ -40,12 +40,12 @@ public class ReportesClass{
       }catch(Exception e){}
     }
     
-    public void setParametro(String nom_p, String p){
-        parameters.put(nom_p, p);
+    public void setParametro(String nombre_parametro, String valor){
+        parameters.put(nombre_parametro, valor);
     }
     
-    public void setParametro(String nom_p, int p){
-       parameters.put(nom_p, p);
+    public void setParametro(String nombre_parametro, int valor){
+       parameters.put(nombre_parametro, valor);
     }
         
     public String getNomReporte(){
@@ -75,6 +75,7 @@ public class ReportesClass{
         c=null;
      }
      catch (Exception e){
+         e.printStackTrace();
             JOptionPane.showMessageDialog(null, e.getMessage(), "Error en:"+nombre_reporte, JOptionPane.ERROR_MESSAGE);
      }
       msjRep.dispose();
